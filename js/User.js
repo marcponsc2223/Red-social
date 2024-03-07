@@ -4,7 +4,7 @@
 // Implementa mètodes per afegir un nou perfil d'usuari, mostrar el perfil d'un usuari i permetre als usuaris seguir-se mútuament.
 
 class User {
-    constructor ({username, bio, followers = 0, post = null}) {
+    constructor ({username, bio, followers = 0, post = 0}) {
         this.username = username
         this.bio = bio
         this.followers = followers
@@ -26,6 +26,12 @@ class User {
     }
     get getFollowers() {
         return this.followers
+    }
+    get getUsername() {
+        return this.username
+    }
+    get getPost() {
+        return this.post
     }
     get getProfile() {
         return `Username: "${this.username}" Bio: "${this.bio}" Followers: "${this.followers}" Post: "${this.post}" \n `
